@@ -1,11 +1,13 @@
 import { useState,useEffect } from 'react' 
 import ProductCard from '../ProductCard/ProductCard';
 import axios, { Axios } from 'axios'
+import { Typography} from 'antd';
 
 function Products(){
     
     let [products,setProducts]=useState([])
-  
+    const {  Title} = Typography;
+
     useEffect(()=>{
       axios.get("https://fakestoreapi.com/products/").then((results)=>{
         setProducts(results.data)
@@ -16,7 +18,7 @@ function Products(){
 
     return(
         <>
-      <h1>Lista de Productos</h1>
+      <Title level={3}>Product list</Title>
       {
         products && products.map((product)=>{
           return (
