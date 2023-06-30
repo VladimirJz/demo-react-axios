@@ -5,6 +5,7 @@ import FormDisabledDemo from './components/LoginForm/LoginForm'
 import DefaultLayout from './layout/DefaultLayout'
 import { BrowserRouter as Router ,Routes,Route } from 'react-router-dom';
 import ProductDetail from './components/ProductDetail/ProductDetail';
+import StorePage from './pages/Store';
 
 function App() {
   
@@ -16,8 +17,9 @@ function App() {
         <Routes>
           <Route path='/main' element={<DefaultLayout/>}/>
           <Route path='/' element={<FormDisabledDemo/>}/>
-          <Route path='store' element={<Products/>}/>
+          <Route path='store' element={<StorePage/>}/>
           <Route path='store/products/:id' element={ <ProductDetail/>}/>
+
         </Routes>
       </Router>
     </div>

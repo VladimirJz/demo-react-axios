@@ -1,13 +1,20 @@
-import Products from './components/Products/Products';
+import Products from '../components/Products/Products';
 import DefaultLayout  from '../layout/DefaultLayout';
 
+
+
+const ProductsList = () => {
+    return (
+        <Products/>
+    )
+  }
 
 function StorePage(){
 
 
 
 
-    return( <DefaultLayout ></DefaultLayout> );
+    return( <DefaultLayout currentPage={ProductsList} ></DefaultLayout> );
     }
     
 export default StorePage
